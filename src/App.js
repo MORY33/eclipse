@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Images from "./components/Images";
 import Footer from "./components/Footer";
+import { Box, CircularProgress, Typography } from "@mui/material"
 import "./App.css"
 // import records from "./data.json"
 
@@ -31,15 +32,24 @@ export default function App() {
 
   },[])
 
+  if(loading){
+    return(
+      <Box mt={40} display="flex"
+      justifyContent="center"
+      alignItems="center"
+    >
+         <CircularProgress/>
+      </Box>
+    )
+  }
 
-
-
-
-  // records.map(record => {
-  //   console.log(records)
-  // })
-
-
+  if (error){
+    return(
+      <Typography variant="h6" mt={20} color="red">
+        Something Went Wrong
+      </Typography>
+    )
+  }
 
 
 
@@ -48,6 +58,6 @@ export default function App() {
    {images.map(image=> (
      <Images url={image.urls.full} element={image.user.username} date = {image.created_at} key={image.id}/>
    ))}
-   <Footer/>
+   {/* <Footer/> */}
   </div>;
 }
