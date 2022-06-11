@@ -1,5 +1,4 @@
 body{
-  /* background: linear-gradient(to right, #DECBA4, #3E5151); */
   margin-top: 5%;
 }
 
@@ -20,28 +19,19 @@ body{
 
 
 
-element{
---size: 35px;
-}
-
 .super{
   font-size: 12px;
   vertical-align: sub;
   margin-left: 5px;
 }
 
-/* figure{
-  width: 350px;
-  height: 350px;
-  overflow: hidden; 
-} */
+
 
 img{
   width: 350px; 
   height: 350px; 
   object-fit: cover;
   transition: transform .2s ease;
-  /* transform: scale(1); */
 
 }
 
@@ -64,10 +54,7 @@ div.description{
   transform: translateX(-50%);
   z-index: 100;
   background-color: rgba(200,200,200,0.7);
-  /* background-color: linear-gradient(rgba(200,200,200,0.0), rgba(200,200,200,0.7)) */
 }
-
-
 
 p{
   display: inline;
